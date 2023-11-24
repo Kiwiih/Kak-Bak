@@ -13,12 +13,16 @@ body {
 /* Navigation */
 
 nav {
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #EE4E34;
     color: white;
     width: 100%;
+    z-index: 1;
+
 }
 
 /* Buttons */
@@ -44,6 +48,10 @@ nav button,
 button:hover {
     background-color: #45a049;
     transform: scale(1.1);
+}
+
+h2 {
+    margin-top: 5rem;
 }
 
 h1, h2, h3, h4, p, img {

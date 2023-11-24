@@ -10,18 +10,18 @@
   <nav>
   <h1>Kak & Bak - En Svensk Tradition Sedan 1834</h1>
 <!-- Header buttons -->
-  <button id="chokladkaka-btn">Chokladkaka</button>
-  <button id="vaniljkakor-btn">Vaniljkakor</button>
-  <button id="kardemummabakelse-btn">Kardemumma Bakelse</button>
-  <button id="blabarstarta-btn">Blåbärstårta</button>
+  <button onclick="jumpToTarget('chokladkaka-jump')">Chokladkaka</button>
+  <button onclick="jumpToTarget('vaniljkaka-jump')">Vaniljkaka</button>
+  <button onclick="jumpToTarget('kardemummabakelse-jump')">Kardemumma Bakelse</button>
+  <button onclick="jumpToTarget('blabarstarta-jump')">Blåbärstårta</button>
   </nav>
   <main>
     <h2>Välkommen in i värmen där bakning möts av kärlek</h2>
     <h3>Se några av våra familjefavoriter nedan</h3>
     <div id="recipe-container">
-
+<!-- Images -->
        <div class="recipes" id="chokladkaka">
-  <img src="./images/chokladkaka.jpg" id="chokadkaka-jump" alt="chokladkaka" loading="lazy">
+  <img src="./images/chokladkaka.jpg" id="chokladkaka-jump" alt="chokladkaka" loading="lazy">
         <h4>Chokladkaka</h4><!-- 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
    <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
@@ -29,43 +29,37 @@
        </div>
        <br>
        <div class="recipes" id="vaniljkaka">
-        <img src="./images/vaniljkaka.jpg" alt="vaniljkaka" loading="lazy">
+        <img src="./images/vaniljkaka.jpg" id="vaniljkaka-jump" alt="vaniljkaka" loading="lazy">
               <h4>Vaniljkaka</h4><!-- 
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
-<<<<<<< HEAD
          <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
         <button id="update-portions">Uppdatera portioner</button> -->
-=======
-       
->>>>>>> eac05130aeadad407c68382c5a2192183190275a
              </div>
              <br>
              <div class="recipes" id="kardemummabakelse">
-              <img src="./images/kardemummabakelse.jpg" alt="kardemummabakelse" loading="lazy">
+              <img src="./images/kardemummabakelse.jpg" id="kardemummabakelse-jump" alt="kardemummabakelse" loading="lazy">
                     <h4>Kardemummabakelse</h4><!-- 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
-<<<<<<< HEAD
                <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
               <button id="update-portions">Uppdatera portioner</button> -->
-=======
-               
->>>>>>> eac05130aeadad407c68382c5a2192183190275a
                    </div>
                    <br>
                    <div class="recipes" id="blabarstarta">
-                    <img src="./images/blabarstårta.jpg" alt="Blåbärstårta" loading="lazy">
+                    <img src="./images/blabarstårta.jpg" id="blabarstarta-jump" alt="Blåbärstårta" loading="lazy">
                           <h4>Blåbärstårta</h4><!-- 
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
-<<<<<<< HEAD
                      <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
                     <button id="update-portions">Uppdatera portioner</button> -->
-=======
-                    
->>>>>>> eac05130aeadad407c68382c5a2192183190275a
                          </div>
     </div>
   </main>
   <script src="./js/main.js"></script>
+  <script>
+    function jumpToTarget(targetId) {
+      let targetElement = document.getElementById(targetId);
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 
 </html>
