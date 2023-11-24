@@ -7,16 +7,52 @@
 </head>
 
 <body>
-  <h1>Välkommen till Receptsamlingen!</h1>
+  <nav>
+  <h1>Kak & Bak - En Svensk Tradition Sedan 1834</h1>
+<!-- Header buttons -->
   <button id="chokladkaka-btn">Chokladkaka</button>
   <button id="vaniljkakor-btn">Vaniljkakor</button>
-  <!-- Lägg eventuellt till fler knappar för andra recept här -->
+  <button id="kardemummabakelse-btn">Kardemumma Bakelse</button>
+  <button id="blabarstarta-btn">Blåbärstårta</button>
+  </nav>
+  <main>
+    <h2>Välkommen in i värmen där bakning möts av kärlek</h2>
+    <h3>Se några av våra familjefavoriter nedan</h3>
+    <div id="recipe-container">
 
-  <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
+       <div class="recipes" id="chokladkaka">
+  <img src="./images/chokladkaka.jpg" alt="chokladkaka" loading="lazy">
+        <h4>Chokladkaka</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
+   <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
   <button id="update-portions">Uppdatera portioner</button>
-
-  <div id="recipe-container"></div>
-
+       </div>
+       <br>
+       <div class="recipes" id="vaniljkaka">
+        <img src="./images/vaniljkaka.jpg" alt="vaniljkaka" loading="lazy">
+              <h4>Vaniljkaka</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
+         <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
+        <button id="update-portions">Uppdatera portioner</button>
+             </div>
+             <br>
+             <div class="recipes" id="kardemummabakelse">
+              <img src="./images/kardemummabakelse.jpg" alt="kardemummabakelse" loading="lazy">
+                    <h4>Kardemummabakelse</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
+               <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
+              <button id="update-portions">Uppdatera portioner</button>
+                   </div>
+                   <br>
+                   <div class="recipes" id="blabarstarta">
+                    <img src="./images/blabarstårta.jpg" alt="Blåbärstårta" loading="lazy">
+                          <h4>Blåbärstårta</h4>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
+                     <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
+                    <button id="update-portions">Uppdatera portioner</button>
+                         </div>
+    </div>
+  </main>
   <script src="./js/main.js"></script>
 </body>
 
