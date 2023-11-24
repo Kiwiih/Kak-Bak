@@ -5,6 +5,11 @@ const chokladkakaDiv = document.getElementById('chokladkaka');
 const kardemummabakelseDiv = document.getElementById('kardemummabakelse');
 const blueberrycakeDiv = document.getElementById('blabarstarta');
 
+function jumpToTarget(targetId) {
+    let targetElement = document.getElementById(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
 updatePortionsButtons.forEach(button => {
   button.addEventListener('click', updatePortionsFunc);
 });
@@ -75,34 +80,61 @@ function updatePortionsFunc(event) {
 }
 
 function renderRecipe(recipe) {
-  if (!recipe || !recipe.recipeName) {
-    console.error("Invalid recipe data:", recipe);
-    return;
+    if (!recipe || !recipe.recipeName) {
+      console.error("Invalid recipe data:", recipe);
+      return;
+    }
+  
+    let recipeElement = document.getElementById(recipe.recipeName);
+  
+    if (!recipeElement) {
+      recipeElement = document.createElement('div');
+      recipeElement.classList.add('recipes');
+      recipeElement.id = recipe.recipeName.toLowerCase();
+      recipeContainer.appendChild(recipeElement);
+  
+      const heading = document.createElement('h3');
+      heading.textContent = recipe.recipeName;
+      recipeElement.appendChild(heading);
+  
+      // Create portion input
+      const portionInput = document.createElement('input');
+      portionInput.type = 'number';
+      portionInput.id = `portion-count-${recipe.recipeName}`;
+      portionInput.value = recipe.portions;
+      portionInput.min = 1;
+      recipeElement.appendChild(portionInput);
+  
+      // Create update button
+      const updateButton = document.createElement('button');
+      updateButton.textContent = 'Uppdatera portioner';
+      updateButton.addEventListener('click', updatePortionsFunc);
+      updateButton.dataset.recipe = recipe.recipeName;
+      recipeElement.appendChild(updateButton);
+  
+      // Create ingredient list container
+      const ingredientList = document.createElement('ul');
+      ingredientList.id = `${recipe.recipeName.toLowerCase()}-ingredients`;
+      recipeElement.appendChild(ingredientList);
+    } else {
+      // Update portions input value
+      const portionInput = document.getElementById(`portion-count-${recipe.recipeName}`);
+      if (portionInput) {
+        portionInput.value = recipe.portions;
+      }
+    }
+  
+    // Update ingredient list
+    const ingredientList = document.getElementById(`${recipe.recipeName.toLowerCase()}-ingredients`);
+    if (ingredientList) {
+      ingredientList.innerHTML = ''; // Clear previous content
+  
+      recipe.ingredients.forEach(ingredient => {
+        const ingredientListItem = document.createElement('li');
+        ingredientListItem.textContent = `${ingredient.name}: ${ingredient.updatedAmount} ${ingredient.unit}`;
+        ingredientList.appendChild(ingredientListItem);
+      });
+    } else {
+      console.error("Ingredient list not found for recipe:", recipe);
+    }
   }
-
-  let recipeElement = document.getElementById(recipe.recipeName);
-
-  if (!recipeElement) {
-    recipeElement = document.createElement('div');
-    recipeElement.classList.add('recipes');
-    recipeElement.id = recipe.recipeName.toLowerCase();
-    recipeContainer.appendChild(recipeElement);
-
-    const heading = document.createElement('h3');
-    heading.textContent = recipe.recipeName;
-    recipeElement.appendChild(heading);
-
-    // Create portion input
-    const portionInput = document.createElement('input');
-    portionInput.type = 'number';
-    portionInput.id = `portion-count-${recipe.recipeName}`;
-    portionInput.value = recipe.portions;
-    portionInput.min = 1;
-    recipeElement.appendChild(portionInput);
-
-    // Create update button
-    const updateButton = document.createElement('button');
-    updateButton.textContent = 'Uppdatera portioner';
-    updateButton.addEventListener('click', updatePortionsFunc);
-    updateButton.dataset.recipe = recipe.recipeName;
-    recipeElement}}

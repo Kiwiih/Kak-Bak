@@ -22,66 +22,38 @@
 <!-- Images -->
        <div class="recipes" id="chokladkaka">
           <img src="./images/chokladkaka.jpg" id="chokladkaka-jump" alt="chokladkaka" loading="lazy">
-        <h4>Chokladkaka</h4><!-- 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>-->
-   <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
-  <button id="update-portions">Uppdatera portioner</button> 
+        <h4>Chokladkaka</h4>
+        <p><strong>Portioner:</strong> <input type="number" id="portion-count-Chokladkaka" value="1" min="1"></p>
+              <button class="update-portions-btn" data-recipe="Chokladkaka">Uppdatera portioner</button>
+              <div id="chokladkaka-ingredients" class="ingredients-list"></div>
        </div>
        <br>
        <div class="recipes" id="vaniljkaka">
           <img src="./images/vaniljkaka.jpg" id="vaniljkaka-jump" alt="vaniljkaka" loading="lazy">
-          <h4>Vaniljkaka</h4><!-- 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
-     <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
-    <button id="update-portions">Uppdatera portioner</button> -->
+          <h4>Vaniljkaka</h4> 
+          <p><strong>Portioner:</strong> <input type="number" id="portion-count-Vaniljkakor" value="1" min="1"></p>
+              <button class="update-portions-btn" data-recipe="Vaniljkakor">Uppdatera portioner</button>
+              <div id="vaniljkaka-ingredients" class="ingredients-list"></div>
          </div>
          <br>
          <div class="recipes" id="kardemummabakelse">
           <img src="./images/kardemummabakelse.jpg" id="kardemummabakelse-jump" alt="kardemummabakelse" loading="lazy">
-                <h4>Kardemummabakelse</h4><!-- 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
-           <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
-          <button id="update-portions">Uppdatera portioner</button> -->
+                <h4>Kardemummabakelse</h4>
+                <p><strong>Portioner:</strong> <input type="number" id="portion-count-Kardemummabakelse" value="1" min="1"></p>
+              <button class="update-portions-btn" data-recipe="Kardemummabakelse">Uppdatera portioner</button>
+              <div id="kardemummabakelse-ingredients" class="ingredients-list"></div>
                </div>
                <br>
                <div class="recipes" id="blabarstarta">
                 <img src="./images/blabarstårta.jpg" id="blabarstarta-jump" alt="Blåbärstårta" loading="lazy">
-                      <h4>Blåbärstårta</h4><!-- 
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p>
-                 <p><strong>Portioner:</strong> <input type="number" id="portion-count" value="1" min="1"></p>
-                <button id="update-portions">Uppdatera portioner</button> -->
->>>>>>> 02bc29e5f131fd6763c8d89d1451c697c64962fe
-          <img src="./images/vaniljkaka.jpg" alt="vaniljkaka" loading="lazy">
-              <h4>Vaniljkaka</h4>
-              <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p> -->
-              <p><strong>Portioner:</strong> <input type="number" id="portion-count-Vaniljkakor" value="1" min="1"></p>
-              <button class="update-portions-btn" data-recipe="Vaniljkakor">Uppdatera portioner</button>
-              <div id="vaniljkaka-ingredients" class="ingredients-list"></div>
-            
-             </div>
-             <br>
-             <div class="recipes" id="kardemummabakelse">
-              <img src="./images/kardemummabakelse.jpg" alt="kardemummabakelse" loading="lazy">
-                    <h4>Kardemummabakelse</h4>
-                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p> -->
-               
-                   </div>
-                   <br>
-                   <div class="recipes" id="blabarstarta">
-                    <img src="./images/blabarstårta.jpg" alt="Blåbärstårta" loading="lazy">
-                          <h4>Blåbärstårta</h4>
-                          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora ab ducimus, mollitia velit nobis ullam hic odio in sequi culpa officia dolores facere id corporis cupiditate. Dignissimos, eligendi deserunt?</p> -->
-                    
-                         </div>
+                      <h4>Blåbärstårta</h4>
+                      <p><strong>Portioner:</strong> <input type="number" id="portion-count-Blåbärstårta" value="1" min="1"></p>
+              <button class="update-portions-btn" data-recipe="Blåbärstårta">Uppdatera portioner</button>
+              <div id="blabarstarta-ingredients" class="ingredients-list"></div>
+
     </div>
   </main>
   <script src="./js/main.js"></script>
-  <script>
-     function jumpToTarget(targetId) {
-       let targetElement = document.getElementById(targetId);
-       targetElement.scrollIntoView({ behavior: 'smooth' });
-     }
-   </script>
    </body>
 
 </html>
