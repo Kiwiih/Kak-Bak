@@ -1,6 +1,6 @@
 const updatePortionsButtons = document.querySelectorAll('.update-portions-btn');
 const recipeContainer = document.getElementById('recipe-container');
-const vaniljkakaDiv = document.getElementById('vaniljkaka');
+const vaniljkakDiv = document.getElementById('vaniljkaka');
 const chokladkakaDiv = document.getElementById('chokladkaka');
 const kardemummabakelseDiv = document.getElementById('kardemummabakelse');
 const blueberrycakeDiv = document.getElementById('blabarstarta');
@@ -69,6 +69,7 @@ function calculateUpdatedRecipe(recipe, newPortionCount) {
       ingredients: updatedIngredients
     };
   }
+
 function updatePortionsFunc(event) {
     const button = event.target;
     const recipeName = button.dataset.recipe;
