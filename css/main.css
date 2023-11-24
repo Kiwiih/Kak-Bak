@@ -39,6 +39,7 @@ nav button,
     margin-left: 1rem;
     background-color: #4CAF50; 
     color: white; 
+    text-align: center;
     border: none; 
     border-radius: 5px; 
     cursor: pointer; 
@@ -50,6 +51,11 @@ button:hover {
     transform: scale(1.1);
 }
 
+.update-portions-btn {
+    justify-content: center;
+    align-items: center;
+}
+
 h2 {
     margin-top: 5rem;
 }
@@ -58,6 +64,11 @@ h1, h2, h3, h4, p, img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.recipes {
+    text-align: center;
+    list-style: none;
 }
 
 .recipes img {
@@ -72,8 +83,4 @@ h1, h2, h3, h4, p, img {
 
 .recipes img:hover {
     opacity: 0.8;
-}
-
-p {
-    max-width: 50%;
 }
